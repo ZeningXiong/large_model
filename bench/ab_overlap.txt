@@ -1,0 +1,9 @@
+memhog: READY 8.09 (holding 9.3 GB, locked 9.3 GB)
+A_1 [--no-overlap]  decode: 32 tokens in 64.70 s (2.022 s/token)  | fetch 1678.84 moe 205.63 ms/token
+B_1 []  decode: 32 tokens in 73.01 s (2.282 s/token)  | fetch 1768.84 moe 370.25 ms/token
+A_2 [--no-overlap]  decode: 32 tokens in 65.47 s (2.046 s/token)  | fetch 1680.78 moe 217.12 ms/token
+B_2 []  decode: 32 tokens in 59.76 s (1.868 s/token)  | fetch 1369.22 moe 361.22 ms/token
+  trace overlap\A_1.trace == baseline
+  trace overlap\A_2.trace == baseline
+  trace overlap\B_1.trace == baseline
+  trace overlap\B_2.trace == baseline

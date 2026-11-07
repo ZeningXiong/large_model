@@ -1,0 +1,3 @@
+<|im_start|>user
+Write a Python function that parses a CSV file and returns the average of each numeric column. Include error handling.<|im_end|>
+<|im_start|>assistant

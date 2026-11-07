@@ -1,0 +1,26 @@
+# build output
+bin/
+*.o
+*.exe
+
+# local environment and scratch
+.venv/
+.tmp/
+__pycache__/
+*.pyc
+
+# third-party sources downloaded for study (kimi-k3-in-c); not ours to redistribute
+_src/
+
+# generated test models: 60-330 MB each, recreate with `make fixtures`
+tests/fixtures/tiny/*.gguf
+tests/fixtures/tiny/*.log
+
+# per-run copies of routing traces (bench/traces/*.bin are kept: they are the evidence
+# behind the cache-policy choice and the baseline the A/B scripts compare against)
+bench/ab/**/*.trace
+bench/4v8/*.trace
+bench/**/stop.flag
+
+# model files never belong in the repository
+*.gguf

@@ -1,0 +1,38 @@
+memhog: READY 8.02 (holding 17.6 GB, locked 17.6 GB)
+== qms run 1  (01:09:10)
+  TOTAL                7.00 GB   available 8.05 GB
+expert cache: 181 slots x 11.03 MB = 2.00 GB (unbuffered reads, decayed-LFU eviction)
+prompt: 25 tokens in 16.45 s
+decode: 16 tokens in 34.42 s (2.151 s/token)
+expert cache: 17085 requests, 1059 hits (6.2%), 16026 misses
+experts streamed (decode)   : 7.32 GB/token, 1.668 s/token waiting, 4.39 GB/s
+PEAK working set: 6.85 GB   <- measured; the plan above is a forecast
+peak_working_set_gb 6.854
+wall_s 54.5
+exit 0
+== llama.cpp run 1  (01:10:05)
+load time =   12536.53 ms
+prompt eval time =   46784.46 ms /    24 tokens ( 1949.35 ms per token,     0.51 tokens per second)
+eval time =   89589.38 ms /    15 runs   ( 5972.63 ms per token,     0.17 tokens per second)
+peak_working_set_gb 11.113
+wall_s 150.8
+exit 0
+== qms run 2  (01:12:36)
+  TOTAL                7.00 GB   available 10.61 GB
+expert cache: 181 slots x 11.03 MB = 2.00 GB (unbuffered reads, decayed-LFU eviction)
+prompt: 25 tokens in 24.03 s
+decode: 16 tokens in 48.05 s (3.003 s/token)
+expert cache: 17085 requests, 1059 hits (6.2%), 16026 misses
+experts streamed (decode)   : 7.32 GB/token, 2.558 s/token waiting, 2.86 GB/s
+PEAK working set: 6.85 GB   <- measured; the plan above is a forecast
+peak_working_set_gb 6.849
+wall_s 77.1
+exit 0
+== llama.cpp run 2  (01:13:53)
+load time =   12870.14 ms
+prompt eval time =   54932.21 ms /    24 tokens ( 2288.84 ms per token,     0.44 tokens per second)
+eval time =   95907.78 ms /    15 runs   ( 6393.85 ms per token,     0.16 tokens per second)
+peak_working_set_gb 11.096
+wall_s 165.7
+exit 0
+done 01:16:40

@@ -1,0 +1,20 @@
+qms      : 8 steps in 18.4s
+    resident weights     4.83 GB  (trunk only; experts streamed from disk)
+    TOTAL                6.50 GB   available 21.56 GB
+    loaded E:/models/qwen3-235b/Q4_0/Qwen3-235B-A22B-Instruct-2507-Q4_0-00001-of-00003.gguf: 94 layers, 4.83 GB resident, 2.7 s
+    prompt: 5 tokens in 6.41 s
+    decode: 7 tokens in 9.00 s (1.286 s/token)
+    experts streamed (whole run): 81.63 GB in 22965 reads, 12.1 s waiting, 6.77 GB/s
+    experts streamed (decode)   : 8.02 GB/token, 0.962 s/token waiting, 8.34 GB/s
+    PEAK working set: 5.50 GB   <- measured; the plan above is a forecast
+llama.cpp: 8 steps in 58.4s
+  step 0: qms  12095  llama  12095  ==  top-10 overlap  9  max|dlogp| 0.390  qms top1-top2 2.363 
+  step 1: qms     11  llama     11  ==  top-10 overlap  9  max|dlogp| 0.355  qms top1-top2 0.278 
+  step 2: qms    892  llama    892  ==  top-10 overlap 10  max|dlogp| 0.313  qms top1-top2 0.915 
+  step 3: qms    374  llama    374  ==  top-10 overlap 10  max|dlogp| 0.473  qms top1-top2 2.376 
+  step 4: qms   7407  llama   7407  ==  top-10 overlap  9  max|dlogp| 0.531  qms top1-top2 0.756 
+  step 5: qms    304  llama    304  ==  top-10 overlap  9  max|dlogp| 0.553  qms top1-top2 3.074 
+  step 6: qms    279  llama   4505  !=  top-10 overlap 10  max|dlogp| 0.375  qms top1-top2 0.543 <-- UNEXPLAINED
+  step 7: qms  18172  llama     13  !=  top-10 overlap  0  max|dlogp| nan  qms top1-top2 0.042 (after divergence: not judged)
+worst |dlogprob| before divergence 0.553, unexplained 1
+VERDICT: FAIL

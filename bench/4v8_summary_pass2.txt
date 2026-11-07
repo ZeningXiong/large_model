@@ -1,0 +1,47 @@
+== qms8_1  (02:17:04)
+   memhog: READY 7.95 (holding 18.7 GB, locked 18.7 GB)
+    attention pinned 94/94 layers (3.77 GB), embedding rows read on demand
+  TOTAL                7.50 GB   available 8.00 GB
+prompt: 25 tokens in 17.58 s
+decode: 16 tokens in 33.39 s (2.087 s/token)
+experts streamed (decode)   : 6.70 GB/token, 1.613 s/token waiting, 4.16 GB/s
+PEAK working set: 7.35 GB   <- measured; the plan above is a forecast
+peak_working_set_gb 7.346
+wall_s 53.8
+exit 0
+== qms4_1  (02:18:09)
+   memhog: READY 4.01 (holding 23.0 GB, locked 23.0 GB)
+    attention pinned 65/94 layers (2.61 GB), embedding rows read on demand, rest streamed
+  TOTAL                3.75 GB   available 4.03 GB
+prompt: 25 tokens in 18.01 s
+decode: 16 tokens in 41.70 s (2.606 s/token)
+trunk streamed: 65/94 layers pinned, 19.82 GB read in 494 reads, 0.0 s waiting
+experts streamed (decode)   : 8.03 GB/token, 2.106 s/token waiting, 3.81 GB/s
+PEAK working set: 3.60 GB   <- measured; the plan above is a forecast
+peak_working_set_gb 3.600
+wall_s 61.8
+exit 0
+== qms8_2  (02:19:21)
+   memhog: READY 7.96 (holding 19.1 GB, locked 19.1 GB)
+    attention pinned 94/94 layers (3.77 GB), embedding rows read on demand
+  TOTAL                7.50 GB   available 8.00 GB
+prompt: 25 tokens in 17.12 s
+decode: 16 tokens in 33.79 s (2.112 s/token)
+experts streamed (decode)   : 6.70 GB/token, 1.652 s/token waiting, 4.06 GB/s
+PEAK working set: 7.35 GB   <- measured; the plan above is a forecast
+peak_working_set_gb 7.349
+wall_s 53.6
+exit 0
+== qms4_2  (02:20:26)
+   memhog: READY 3.94 (holding 23.0 GB, locked 23.0 GB)
+    attention pinned 65/94 layers (2.61 GB), embedding rows read on demand, rest streamed
+  TOTAL                3.75 GB   available 3.97 GB
+prompt: 25 tokens in 19.01 s
+decode: 16 tokens in 41.48 s (2.593 s/token)
+trunk streamed: 65/94 layers pinned, 19.82 GB read in 494 reads, 0.0 s waiting
+experts streamed (decode)   : 8.03 GB/token, 2.088 s/token waiting, 3.85 GB/s
+PEAK working set: 3.60 GB   <- measured; the plan above is a forecast
+peak_working_set_gb 3.602
+wall_s 62.8
+exit 0
+done 02:21:39

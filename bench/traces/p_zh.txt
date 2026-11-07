@@ -1,0 +1,3 @@
+<|im_start|>user
+请用三段话介绍长城的历史，以及它在今天对中国旅游业的意义。<|im_end|>
+<|im_start|>assistant

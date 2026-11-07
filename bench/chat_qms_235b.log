@@ -1,0 +1,14 @@
+memory plan
+  resident weights     4.83 GB  (trunk only; experts streamed from disk)
+  expert cache         8.00 GB  (11.0 MB per expert)
+  KV cache             0.39 GB  (ctx 1024, fp32)
+  scratch              0.07 GB
+  TOTAL               13.29 GB   available 17.48 GB
+expert cache: 724 slots x 11.03 MB = 7.99 GB (unbuffered reads, decayed-LFU eviction)
+ready: E:/models/qwen3-235b/Q4_0/Qwen3-235B-A22B-Instruct-2507-Q4_0-00001-of-00003.gguf, ctx 1024, temp 0.70 top-k 20 top-p 0.80 seed 42. Empty line or /exit quits.
+
+> 
+[25 prompt tokens in 16.8 s | 18 tokens in 39.2 s, 2.18 s/token | context 43/1024]
+> 
+[27 prompt tokens in 12.9 s | 8 tokens in 11.8 s, 1.48 s/token | context 78/1024]
+> 

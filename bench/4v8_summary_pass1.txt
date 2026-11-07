@@ -1,0 +1,51 @@
+== qms8_1  (02:08:52)
+   memhog: READY 7.95 (holding 15.0 GB, locked 15.0 GB)
+    attention pinned 94/94 layers (3.77 GB), embedding rows read on demand
+  TOTAL                7.60 GB   available 7.98 GB
+REFUSING TO START: plan needs 7.60 GB, 7.98 GB available (95% rule).
+peak_working_set_gb 0.007
+wall_s 0.1
+exit 1
+== qms4_1  (02:09:03)
+   memhog: READY 3.95 (holding 19.0 GB, locked 19.0 GB)
+    attention pinned 67/94 layers (2.69 GB), embedding rows read on demand, rest streamed
+  TOTAL                3.80 GB   available 3.97 GB
+REFUSING TO START: plan needs 3.80 GB, 3.97 GB available (95% rule).
+peak_working_set_gb 0.007
+wall_s 0.0
+exit 1
+== llama4_1  (02:09:14)
+   memhog: READY 3.95 (holding 19.0 GB, locked 19.0 GB)
+prompt eval time =   35200.35 ms /    24 tokens ( 1466.68 ms per token,     0.68 tokens per second)
+eval time =   89263.20 ms /    15 runs   ( 5950.88 ms per token,     0.17 tokens per second)
+peak_working_set_gb 9.258
+wall_s 137.4
+exit 0
+== qms8_2  (02:11:42)
+   memhog: READY 7.96 (holding 19.3 GB, locked 19.3 GB)
+    attention pinned 94/94 layers (3.77 GB), embedding rows read on demand
+  TOTAL                7.60 GB   available 7.98 GB
+REFUSING TO START: plan needs 7.60 GB, 7.98 GB available (95% rule).
+peak_working_set_gb 0.007
+wall_s 0.0
+exit 1
+== qms4_2  (02:11:53)
+   memhog: READY 4.01 (holding 23.3 GB, locked 23.3 GB)
+    attention pinned 67/94 layers (2.69 GB), embedding rows read on demand, rest streamed
+  TOTAL                3.80 GB   available 4.00 GB
+prompt: 25 tokens in 18.52 s
+decode: 16 tokens in 42.00 s (2.625 s/token)
+trunk streamed: 67/94 layers pinned, 18.46 GB read in 460 reads, 0.0 s waiting
+experts streamed (decode)   : 8.03 GB/token, 2.094 s/token waiting, 3.83 GB/s
+PEAK working set: 3.65 GB   <- measured; the plan above is a forecast
+peak_working_set_gb 3.655
+wall_s 63.0
+exit 0
+== llama4_2  (02:13:07)
+   memhog: READY 3.98 (holding 23.4 GB, locked 23.4 GB)
+prompt eval time =   34460.89 ms /    24 tokens ( 1435.87 ms per token,     0.70 tokens per second)
+eval time =  135670.29 ms /    15 runs   ( 9044.69 ms per token,     0.11 tokens per second)
+peak_working_set_gb 5.231
+wall_s 182.9
+exit 0
+done 02:16:21

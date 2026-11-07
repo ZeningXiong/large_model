@@ -1,0 +1,10 @@
+# keep each file type's line endings correct regardless of the committer's settings
+*.c    text eol=lf
+*.h    text eol=lf
+*.py   text eol=lf
+*.md   text eol=lf
+*.sh   text eol=lf
+Makefile text eol=lf
+*.bat  text eol=crlf
+*.bin  binary
+*.gguf binary

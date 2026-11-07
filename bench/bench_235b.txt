@@ -1,0 +1,8 @@
+load_backend: loaded RPC backend from E:\llama.cpp\ggml-rpc.dll
+load_backend: loaded CPU backend from E:\llama.cpp\ggml-cpu-zen4.dll
+| model                          |       size |     params | backend    | threads |         lm | rpk |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ------: | ---------: | --: | --------------: | -------------------: |
+| qwen3moe 235B.A22B Q4_0        | 123.98 GiB |   235.09 B | CPU        |      12 |       mmap |   0 |           pp128 |          2.12 ± 0.05 |
+| qwen3moe 235B.A22B Q4_0        | 123.98 GiB |   235.09 B | CPU        |      12 |       mmap |   0 |            tg32 |          0.42 ± 0.09 |
+
+build: 69ee2ecc0 (12144)

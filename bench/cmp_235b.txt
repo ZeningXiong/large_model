@@ -1,0 +1,9 @@
+[ref] 3 shard(s), 1131 tensors: layers=94 embd=4096 heads=64/4x128 experts=8/128 rope=5e+06 eps=1e-06 vocab=151936
+llama.cpp: 4 steps in 45.1s
+reference: forward over 8 tokens in 436.4s
+  step  0: llama  12095  ref  12095  ==  max|dlogp| 0.3354  top1-top2 2.132  min router gap 2.1e-06   (router near-tie 2.1e-06)
+  step  1: llama     11  ref     11  ==  max|dlogp| 0.1613  top1-top2 0.304  min router gap 2.1e-06   (router near-tie 2.1e-06)
+  step  2: llama    892  ref    892  ==  max|dlogp| 0.1914  top1-top2 0.713  min router gap 1.3e-06   (router near-tie 1.3e-06)
+  step  3: llama    374  ref    374  ==  max|dlogp| 0.2901  top1-top2 2.777  min router gap 1.3e-06   (router near-tie 1.3e-06)
+greedy agreement 4/4, |dlogprob| median 0.2408 worst 0.3354, unexplained steps 0
+VERDICT: PASS

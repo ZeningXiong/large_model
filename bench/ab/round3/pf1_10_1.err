@@ -1,0 +1,18 @@
+memory plan (budget-driven: trunk first, then expert cache)
+  resident weights     4.48 GB  (trunk only; experts streamed from disk)
+    attention pinned 94/94 layers (3.77 GB), embedding rows read on demand
+  trunk ring           0.00 GB  (2 slots: 0 layers streamed per token, 0.00 GB/token)
+  expert cache         2.85 GB  (11.0 MB per expert)
+  KV cache             0.10 GB  (ctx 256, fp32)
+  scratch              0.07 GB
+  TOTAL                7.50 GB   available 8.30 GB
+expert cache: 258 slots x 11.03 MB = 2.85 GB (unbuffered reads, decayed-LFU eviction)
+loaded E:/models/qwen3-235b/Q4_0/Qwen3-235B-A22B-Instruct-2507-Q4_0-00001-of-00003.gguf: 94 layers, 4.48 GB resident, 2.8 s
+prompt: 25 tokens in 18.40 s
+decode: 32 tokens in 92.53 s (2.891 s/token)
+profile per decode token (ms): qkv 54.25 attn 14.91 o_proj 50.03 router 9.75 fetch 2534.06 moe 212.72 output 10.59 | sum 2886.31
+expert cache: 29117 requests, 7591 hits (26.1%), 21526 misses
+prefetch (depth 1, top-8): 2548 experts read ahead, 2621 later requested (102.9% precision), 1739 still in flight when needed
+experts streamed (whole run): 257.07 GB in 72222 reads, 89.7 s waiting, 2.87 GB/s
+experts streamed (decode)   : 6.35 GB/token, 2.400 s/token waiting, 2.64 GB/s
+PEAK working set: 7.37 GB   <- measured; the plan above is a forecast

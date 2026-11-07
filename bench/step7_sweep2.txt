@@ -1,0 +1,29 @@
+== cache 2GB prefetch depth 1
+expert cache: 181 slots x 11.03 MB = 2.00 GB (unbuffered reads, decayed-LFU eviction)
+decode: 32 tokens in 62.59 s (1.956 s/token)
+expert cache: 29117 requests, 22030 hits (75.7%), 7087 misses
+prefetch (depth 1, top-8): 20835 experts read ahead, 19337 later requested (92.8% precision), 18970 still in flight when needed
+experts streamed (decode)   : 7.63 GB/token, 1.468 s/token waiting, 5.20 GB/s
+== cache 2GB prefetch depth 2
+expert cache: 181 slots x 11.03 MB = 2.00 GB (unbuffered reads, decayed-LFU eviction)
+decode: 32 tokens in 65.65 s (2.052 s/token)
+expert cache: 29117 requests, 22463 hits (77.1%), 6654 misses
+prefetch (depth 2, top-8): 22854 experts read ahead, 19882 later requested (87.0% precision), 12225 still in flight when needed
+experts streamed (decode)   : 8.16 GB/token, 1.550 s/token waiting, 5.27 GB/s
+== cache 8GB prefetch depth 0
+expert cache: 724 slots x 11.03 MB = 7.99 GB (unbuffered reads, decayed-LFU eviction)
+decode: 32 tokens in 39.51 s (1.235 s/token)
+expert cache: 29117 requests, 12582 hits (43.2%), 16535 misses
+experts streamed (decode)   : 3.83 GB/token, 0.854 s/token waiting, 4.49 GB/s
+== cache 8GB prefetch depth 1
+expert cache: 724 slots x 11.03 MB = 7.99 GB (unbuffered reads, decayed-LFU eviction)
+decode: 32 tokens in 46.58 s (1.456 s/token)
+expert cache: 29117 requests, 22692 hits (77.9%), 6425 misses
+prefetch (depth 1, top-8): 11427 experts read ahead, 11387 later requested (99.6% precision), 9913 still in flight when needed
+experts streamed (decode)   : 4.27 GB/token, 1.032 s/token waiting, 4.14 GB/s
+== cache 8GB prefetch depth 2
+expert cache: 724 slots x 11.03 MB = 7.99 GB (unbuffered reads, decayed-LFU eviction)
+decode: 32 tokens in 38.81 s (1.213 s/token)
+expert cache: 29117 requests, 22989 hits (79.0%), 6128 misses
+prefetch (depth 2, top-8): 12882 experts read ahead, 11380 later requested (88.3% precision), 6766 still in flight when needed
+experts streamed (decode)   : 4.66 GB/token, 0.753 s/token waiting, 6.19 GB/s
