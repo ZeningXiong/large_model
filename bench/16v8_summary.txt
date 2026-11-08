@@ -1,0 +1,55 @@
+== qms8_1  (00:41:18)
+   memhog: READY 8.10 (holding 8.7 GB, locked 8.7 GB)
+    attention pinned 94/94 layers (3.77 GB), embedding rows read on demand
+  expert cache         2.85 GB  (11.0 MB per expert)
+  TOTAL                7.50 GB   available 8.10 GB
+expert cache: 258 slots x 11.03 MB = 2.85 GB (unbuffered reads, decayed-LFU eviction)
+prompt: 25 tokens in 15.53 s
+decode: 32 tokens in 60.87 s (1.902 s/token)
+profile per decode token (ms): qkv 49.56 attn 12.41 o_proj 43.97 router 8.34 fetch 1416.28 moe 355.81 output 10.84 | sum 1897.22
+expert cache: 29117 requests, 5067 hits (17.4%), 24050 misses
+experts streamed (decode)   : 6.34 GB/token, 1.307 s/token waiting, 4.85 GB/s
+PEAK working set: 7.37 GB   <- measured; the plan above is a forecast
+== qms16_1  (00:42:47)
+   memhog: READY 15.98 (holding 2.6 GB, locked 2.6 GB)
+    attention pinned 94/94 layers (3.77 GB), embedding rows read on demand
+  expert cache        10.35 GB  (11.0 MB per expert)
+  TOTAL               15.00 GB   available 16.00 GB
+expert cache: 938 slots x 11.03 MB = 10.35 GB (unbuffered reads, decayed-LFU eviction)
+prompt: 25 tokens in 16.05 s
+decode: 32 tokens in 34.53 s (1.079 s/token)
+profile per decode token (ms): qkv 49.09 attn 11.72 o_proj 45.25 router 9.03 fetch 670.25 moe 278.44 output 10.75 | sum 1074.53
+expert cache: 29117 requests, 14412 hits (49.5%), 14705 misses
+experts streamed (decode)   : 3.22 GB/token, 0.607 s/token waiting, 5.31 GB/s
+PEAK working set: 14.81 GB   <- measured; the plan above is a forecast
+== qms8_2  (00:43:51)
+   memhog: READY 8.01 (holding 11.2 GB, locked 11.2 GB)
+    attention pinned 94/94 layers (3.77 GB), embedding rows read on demand
+  expert cache         2.85 GB  (11.0 MB per expert)
+  TOTAL                7.50 GB   available 7.99 GB
+expert cache: 258 slots x 11.03 MB = 2.85 GB (unbuffered reads, decayed-LFU eviction)
+prompt: 25 tokens in 16.27 s
+decode: 32 tokens in 70.87 s (2.215 s/token)
+profile per decode token (ms): qkv 55.56 attn 13.34 o_proj 48.88 router 10.87 fetch 1682.59 moe 385.72 output 12.63 | sum 2209.59
+expert cache: 29117 requests, 5067 hits (17.4%), 24050 misses
+experts streamed (decode)   : 6.34 GB/token, 1.555 s/token waiting, 4.08 GB/s
+PEAK working set: 7.37 GB   <- measured; the plan above is a forecast
+== qms16_2  (00:45:31)
+   memhog: READY 15.98 (holding 2.7 GB, locked 2.7 GB)
+    attention pinned 94/94 layers (3.77 GB), embedding rows read on demand
+  expert cache        10.35 GB  (11.0 MB per expert)
+  TOTAL               15.00 GB   available 15.91 GB
+expert cache: 938 slots x 11.03 MB = 10.35 GB (unbuffered reads, decayed-LFU eviction)
+prompt: 25 tokens in 15.84 s
+decode: 32 tokens in 52.45 s (1.639 s/token)
+profile per decode token (ms): qkv 50.28 attn 14.81 o_proj 44.53 router 9.16 fetch 1220.63 moe 283.53 output 11.25 | sum 1634.19
+expert cache: 29117 requests, 14412 hits (49.5%), 14705 misses
+experts streamed (decode)   : 3.22 GB/token, 1.152 s/token waiting, 2.80 GB/s
+PEAK working set: 14.81 GB   <- measured; the plan above is a forecast
+trace qms16_1.trace  == baseline
+trace qms16_2.trace  == baseline
+trace qms8_1.trace   == baseline
+trace qms8_2.trace   == baseline
+qms16  runs 1.079 1.639  mean 1.359 s/token
+qms8   runs 1.902 2.215  mean 2.058 s/token
+done 00:46:53
